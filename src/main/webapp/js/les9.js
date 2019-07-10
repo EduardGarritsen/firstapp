@@ -203,11 +203,11 @@ function login(event) {
 	fetch("restservices/authentication", { method: 'POST', body: encData })
     .then(function(response) {
     	if (response.ok) return response.json();
-    	else throw "Wrong username/password";
+    	else throw "<div class='wrong'>Wrong username/password</div>";
     	})
     	.then(myJson => {window.sessionStorage.setItem("myJWT", myJson.JWT); modal.style.display = "none";})
     	
-    	.catch(error => console.log(error));
+    	.catch(error => document.getElementById("wijzigGegevens").innerHTML += error);
 }
 
 
