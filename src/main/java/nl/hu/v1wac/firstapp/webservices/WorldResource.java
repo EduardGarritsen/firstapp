@@ -19,7 +19,7 @@ import nl.hu.v1wac.firstapp.model.Country;
 import nl.hu.v1wac.firstapp.model.ServiceProvider;
 import nl.hu.v1wac.firstapp.model.WorldService;
 
-@Path("/landen")
+@Path("/countries")
 public class WorldResource {
 	private WorldService service = ServiceProvider.getWorldService();
 	
