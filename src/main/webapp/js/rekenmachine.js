@@ -5,8 +5,9 @@ function copy(event) {
 	var newValue = event.target.textContent;
 	newValue2 = newValue2 + newValue;
 
-	document.querySelector("#display").innerHTML = newValue2;
 	console.log(eval(newValue2));
+	document.querySelector("#display").innerHTML = eval(newValue2);
+	
 }
 
 Array.prototype.forEach.call(document.querySelectorAll('button'), function(b) {
